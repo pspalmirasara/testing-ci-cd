@@ -1,6 +1,7 @@
 provider "aws" {
-  profile = "palmira-terraform"
+  profile = "default"
   region  = var.regionDefault
+  token = var.accessToken
   
   assume_role {
     role_arn = var.labRole
