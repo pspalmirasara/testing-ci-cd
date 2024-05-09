@@ -21,14 +21,15 @@ jobs:
     if: github.event_name == 'push'
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    
     - name: Add profile credentials to ~/.aws/credentials
       run: |
         aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID --profile palmira-terraform
         aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY --profile palmira-terraform
         aws configure set region us-east-1 --profile palmira-terraform
-
-    - name: Checkout
-      uses: actions/checkout@v4
+        aws sts get-caller-identity
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
