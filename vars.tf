@@ -11,7 +11,7 @@ variable "projectName" {
 }
 
 variable "subnetA" {
-  default = "subnet-039aa50e8b72f7942"
+  default = "subnet-04e9a3e4b416c5bcf"
 }
 
 variable "subnetB" {
@@ -19,7 +19,7 @@ variable "subnetB" {
 }
 
 variable "subnetC" {
-  default = "subnet-00f23817e14870f8e"
+  default = "subnet-0ac13aa26035d08fb"
 }
 
 variable "vpcId" {
